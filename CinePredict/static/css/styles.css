@@ -1,0 +1,76 @@
+body {
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto claro */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Monoton', cursive; /* Fuente estilo neon */
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f31282; /* Color rosa fuerte */
+    text-shadow: 0 0 10px #e33aa5, 0 0 20px #f31282, 0 0 30px #f3127b, 0 0 40px #f312a1;
+    animation: neon-glow 1.5s ease-in-out infinite alternate; /* Animación */
+}
+
+@keyframes neon-glow {
+    from {
+        text-shadow: 0 0 5px #f31277, 0 0 10px #f3128e, 0 0 15px #f3129d, 0 0 20px #f3127f;
+    }
+    to {
+        text-shadow: 0 0 20px #f31282, 0 0 30px #f31292, 0 0 40px #f312bf, 0 0 50px #f3128a;
+    }
+}
+
+/* Estilo de los enlaces blancos con brillo */
+a {
+    color: #ffffff; /* Blanco */
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+a:hover {
+    text-shadow: 0 0 15px #ffffff, 0 0 20px #ffffff;
+}
+
+/* Navbar (Login logo) */
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+}
+
+.login-logo {
+    width: 40px;
+    filter: drop-shadow(0 0 10px #f31282); /* Sombra rosa brillante */
+    transition: filter 0.3s ease-in-out;
+}
+
+.login-logo:hover {
+    filter: drop-shadow(0 0 20px #f31282); /* Brillo más intenso al pasar el mouse */
+}
+
+/* Footer minimalista */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #1a1a1a; /* Fondo ligeramente más oscuro */
+    color: #bbbbbb; /* Texto gris claro */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
