@@ -7,3 +7,4 @@ def index(request):
 #hsdjksNkdsjbdshjveProyecto_CinePredict
 #hdbhsbd
 #Moises se la come
+#noe se la come toda y aparte le gusta al muy puto 
