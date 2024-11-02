@@ -6,3 +6,4 @@ def index(request):
 #prueba
 #hsdjksNkdsjbdshjveProyecto_CinePredict
 #hdbhsbd
+#Moises se la come
