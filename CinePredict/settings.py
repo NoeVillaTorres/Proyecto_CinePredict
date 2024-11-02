@@ -58,7 +58,7 @@ ROOT_URLCONF = "CinePredict.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['CinePredict/templates'],
+        "DIRS": ['CinePredict/templates', 'CinePredict/templates/login'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
