@@ -5,3 +5,4 @@ def index(request):
     return render(request, 'index.html')
 #prueba
 #hsdjksNkdsjbdshjveProyecto_CinePredict
+#hdbhsbd
