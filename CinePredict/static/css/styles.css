@@ -38,7 +38,8 @@ a {
 }
 
 a:hover {
-    text-shadow: 0 0 15px #ffffff, 0 0 20px #ffffff;
+    /*text-decoration: none !important; /* Elimina subrayado al hacer hover */
+    text-decoration: none; /* Evita que aparezca el subrayado */
 }
 
 /* Navbar (Login logo) */
