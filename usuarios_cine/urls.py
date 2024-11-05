@@ -16,11 +16,12 @@ Including another URLconf
 """
 
 from django.urls import path
-from .views import home, predicciones_page
+from .views import home, cines_page, exit
 
 
 
 urlpatterns = [
     path("", home, name='home'),
-    path("", predicciones_page, name='predicciones_page'),
+    path("cines/", cines_page, name='cines_page'),
+    path('logout/', exit, name='exit')
 ]

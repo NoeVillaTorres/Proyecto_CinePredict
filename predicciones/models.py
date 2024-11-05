@@ -1,5 +1,5 @@
 from django.db import models
-python manage.py makemigrations
+
 from cines.models import Cine
 
 class Prediccion(models.Model):

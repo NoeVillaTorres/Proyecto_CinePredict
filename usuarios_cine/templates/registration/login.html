@@ -5,8 +5,8 @@
 {% block content %}
 <div class="login-container">
     <h1>Iniciar Sesión</h1>
-    <form >
-
+    <form action="" method="post" >
+        {% csrf_token %}
         <div class="form-group">
             <label for="username" class="text-light">Usuario</label>
             <input type="text" class="form-control" id="username" name="username" placeholder="Ingresa tu usuario" required>
