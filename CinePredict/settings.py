@@ -58,7 +58,7 @@ ROOT_URLCONF = "CinePredict.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['CinePredict/templates'],
+        "DIRS": ['CinePredict/templates', 'CinePredict/templates/account','CinePredict/templates/cine' ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -79,8 +79,13 @@ WSGI_APPLICATION = "CinePredict.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "cinepredict_db",
+        "USER": "postgres",
+        "PASSWORD": '2128',
+        "HOST": '192.168.100.7',
+        "DATABASE_PORT": '5432',
+
     }
 }
 
