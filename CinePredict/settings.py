@@ -83,7 +83,7 @@ DATABASES = {
         "NAME": "cinepredict_db",
         "USER": "postgres",
         "PASSWORD": '2128',
-        "HOST": '192.168.100.7',
+        "HOST": '172.16.45.169',
         "DATABASE_PORT": '5432',
 
     }
