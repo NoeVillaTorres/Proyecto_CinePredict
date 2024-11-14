@@ -15,20 +15,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.contrib import admin
+from django.urls import path
+from usuarios_cine.views import home, exit
+from .views import registrar_pelicula, editar_pelicula, eliminar_pelicula, lista_peliculas
 
-from django.conf import settings
-from django.conf.urls.static import static
-
-#from cines.views import index
-from django.urls import path, include
+app_name = 'cines'  # Establece el namespace
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", include('usuarios_cine.urls')),
-    path("cines/", include('cines.urls')),
-    path("accounts/", include('django.contrib.auth.urls')),
+    path("", home, name='home'),
+    path("registrar_pelicula/", registrar_pelicula, name='registrar_pelicula'),
+    path("lista/", lista_peliculas, name='lista_peliculas'),
+    path('editar/<int:pelicula_id>/', editar_pelicula, name='editar_pelicula'),
+    path('eliminar/<int:pelicula_id>/', eliminar_pelicula, name='eliminar_pelicula'),
+    path('logout/', exit, name='exit'),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

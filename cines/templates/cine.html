@@ -1,0 +1,54 @@
+{% extends "basic.html" %}
+
+{% block title %}cine{% endblock %}
+
+{% block content %}
+<div class="navbar">
+        <a href="{% url 'exit' %}" class="logout-link">
+            Cerrar sesión
+        </a>
+</div>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center mb-4" style="font-family: 'Poppins', sans-serif; font-weight: 600;">Registrar Película</h1>
+            <form method="post" action="{% url 'cines:registrar_pelicula' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="titulo" style="font-weight: 300;">Título de la película</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ej. Inception" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagen" style="font-weight: 300;">Imagen de la Película</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="imagen" name="imagen" accept="image/*" required>
+                        <label class="custom-file-label" for="imagen">Selecciona una imagen...</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="genero" style="font-weight: 300;">Género</label>
+                    <input type="text" class="form-control" id="genero" name="genero" placeholder="Ej. Ciencia Ficción" required>
+                </div>
+                <div class="form-group">
+                    <label for="clasificación" style="font-weight: 300;">clasificación</label>
+                    <input type="text" class="form-control" id="clasificación" name="clasificación" placeholder="PG" required>
+                </div>
+               
+                <button type="submit" class="btn btn-dark btn-block" style="font-weight: 400;">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Actualiza el texto del label cuando se selecciona un archivo
+    document.querySelector('.custom-file-input').addEventListener('change', function(e) {
+        var fileName = document.getElementById("imagen").files[0].name;
+        var nextSibling = e.target.nextElementSibling;
+        nextSibling.innerText = fileName;
+    });
+</script>
+
+{% endblock %}

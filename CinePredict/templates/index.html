@@ -18,11 +18,12 @@
 
     <!-- Enlaces a otras secciones -->
     <div>
-        <a href="#contacto">Contacto</a>
-        <a href="#que-es-cinepredict">¿Qué es CinePredict?</a>
+        <a href="{% url 'cines:registrar_pelicula' %}">Registrar</a>
+        <a href="#que-es-cinepredict">Péliculas</a>
+        <a href="#">Predicciones</a>
     </div>
 
-    <!-- Navbar para login/logout n -->
+    <!-- Navbar para login/logout -->
      
     <div class="navbar">
         {% if user.is_authenticated %}

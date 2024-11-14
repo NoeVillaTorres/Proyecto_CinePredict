@@ -75,19 +75,20 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
 }
-                                /* CSS DEL LOGIN*
+                                /* CSS DEL LOGIN y registro*
 
 /* Estilos para el contenedor de inicio de sesión */
 .login-container {
-    background-color: rgba(18, 18, 18, 0.9); /* Fondo ligeramente transparente */
+    background-color: rgba(18, 18, 18, 0.9);
     border-radius: 8px;
-    padding: 40px;
+    padding: 20px; /* Reduce el padding si es muy grande */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    width: 300px; /* Ancho fijo */
-    text-align: center; /* Centrar texto */
-    margin: auto; /* Centrar contenedor */
-    margin-top: 100px; /* Espacio desde la parte superior */
+    width: 100%; /* Ajuste de ancho para que sea responsivo */
+    max-width: 350px; /* Ancho máximo fijo para que no se expanda tanto */
+    text-align: center;
+    margin: 20px auto; /* Centrado y espaciado */
 }
+
 
 /* Estilo para los botones */
 .btn-primary {

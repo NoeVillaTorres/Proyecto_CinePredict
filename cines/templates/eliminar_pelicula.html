@@ -1,0 +1,15 @@
+{% extends "basic.html" %}
+
+{% block title %}Eliminar Película | Cinepredict{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center text-danger">Eliminar Película</h2>
+    <p class="text-center">¿Estás seguro de que deseas eliminar "{{ pelicula.titulo }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a href="{% url 'cines:lista_peliculas' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}
